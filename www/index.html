@@ -49,9 +49,10 @@
           for (var i = 0; i < results.length; i++) {
             var data = results[i].get("text");
             var update = results[i].get("updateDate");
-            msg += data + ":" + update+"<br>";
+            msg += "<tr><td>"+data + "</td><td>" + update+"</td></tr>";
           }
-          $("#message").html(msg);
+          $("#message").html("<table><tr><th>text</th><th>Update Date</th></tr>"+msg+"</table>");
+          //$("#message").html(msg);
         })
     }
   </script>
